@@ -5,8 +5,10 @@ import org.jsfml.window.VideoMode
 import org.jsfml.window.event.Event
 
 const val showMasked = false
-const val maskWidth = 500
-const val maskHeight = 500
+const val maskWidth = 300
+const val maskHeight = 300
+const val canvasHeight = 700
+const val canvasWidth = 700
 
 fun main() {
     val container = Container()
@@ -38,7 +40,7 @@ fun main() {
     val mask = WindowMaskLayer(maskWidth, maskHeight)
     container.addLayer(mask)
 
-    val window = RenderWindow(VideoMode(1000, 1000), "Lab 4")
+    val window = RenderWindow(VideoMode(canvasHeight, canvasWidth), "Lab 4")
 
     while (window.isOpen) {
         val event = window.pollEvent()
@@ -85,9 +87,9 @@ data class Config(
     companion object {
         val Test = Config(
             backgroundColor = BackgroundColor(
-                red = 20,
-                green = 20,
-                blue = 20,
+                red = 200,
+                green = 200,
+                blue = 200,
             ),
             shapesLayers = listOf(
                 ShapesLayer(
@@ -95,7 +97,7 @@ data class Config(
                         ShapesLayer.Shape(
                             points = listOf(
                                 ShapesLayer.Shape.Point(
-                                    x = 200,
+                                    x = 500,
                                     y = 200
                                 ),
                                 ShapesLayer.Shape.Point(

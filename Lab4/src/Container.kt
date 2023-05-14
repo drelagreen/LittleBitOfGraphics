@@ -98,12 +98,12 @@ class Container {
 
         if (showMasked) {
             result.maskedShapes.forEach { shape ->
-                shape.draw(render, Color(0x20, 0x20, 0x20), LineStyle.Dashed)
+                shape.draw(render, Color(0x50, 0x50, 0x50), LineStyle.Dashed)
             }
         }
 
         result.shapes.forEach { shape ->
-            shape.draw(render, Color.WHITE)
+            shape.draw(render, Color.RED)
         }
     }
 }
